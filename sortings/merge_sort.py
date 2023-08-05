@@ -1,4 +1,4 @@
-import math
+
 
 def merge_sort(A,p,r):
     # print("ms->",A,p,r)
@@ -12,7 +12,6 @@ def merge_sort(A,p,r):
 def merge(A,p,q,r):
     
     print("merging->",A[p:q+1],A[q+1:r+1])
-    inf = math.inf
 
     n1 = q-p+1
     n2 = r-q
@@ -28,6 +27,8 @@ def merge(A,p,q,r):
 
     L = A[p:q+1]
     R = A[q+1:r+1]
+
+    inf = 9999999
 
     L.append(inf)
     R.append(inf)
