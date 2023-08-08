@@ -24,13 +24,15 @@ def quick_select(A, k):
                 print(q)
                 return q
             elif l > k-1:
-                quick_select(less, k)
+                return quick_select(less, k)
             elif l < k-1:
-                quick_select(greater, k-l-1)
+                return quick_select(greater, k-l-1)
         else:
             # print("else")
             print(A[low])
             return A[low]
+    else:
+        print("invalid value of K")
 
 
 def partition(A, low, high):
