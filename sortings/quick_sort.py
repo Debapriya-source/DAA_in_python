@@ -15,6 +15,10 @@ def partition(A, low, high):
     # print("partition called")
     # print(A[low], " to ", A[high])
 
+    # randomize quick sort
+    p = random.randint(low, high)
+    A[low], A[p] = A[p], A[low]
+
     pivot_element = A[low]
 
     i = low
@@ -34,7 +38,7 @@ def partition(A, low, high):
     return i
 
 
-arr = [9, 12, 232, 123, 12, 454, 42, 3, 444]
+arr = [19, 12, 232, 123, 454, 42, 3, 444]
 
 print("before sorting->", arr)
 
